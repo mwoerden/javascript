@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- This is a comment in html. -->
+
+<!-- Display date and time -->
+<h1> Hello World! </h1>
+
+<button id="b1" type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+<p id="demo"></p>
+
+<!-- Change html content -->
+<button id="b2" type="button" onclick="document.getElementById('demo').innerHTML = 'You clicked button 2!'"> button 2 </button>
+
+<button id="b3" type="button" onclick="changeColor()"> button 3 </button>
+
+<script>
+    function changeColor(){
+        var clickable1 = document.getElementById('b1');
+        var clickable2 = document.getElementById('b2');
+        var clickable3 = document.getElementById('b3');
+        
+        var original_color = clickable2.style.background
+        var new_color      = '#E00000'
+        
+        if(clickable1.style.background == original_color){
+            clickable1.style.background = new_color;
+        }
+        else{
+            clickable1.style.background = original_color;
+        }
+    }
+</script>
+
+</body>
+</html>
